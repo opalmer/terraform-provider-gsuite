@@ -36,7 +36,7 @@ func TestProvider_impl(t *testing.T) {
 
 func TestProvider_loadCredentialsFromFile(t *testing.T) {
 	ws, es := validateCredentials(testFakeCredentialsPath, "")
-	if len(ws) != 0 {
+	if len(ws) != 0 {w
 		t.Errorf("Expected %d warnings, got %v", len(ws), ws)
 	}
 	if len(es) != 0 {

@@ -8,6 +8,12 @@
   version = "v0.18.0"
 
 [[projects]]
+  name = "github.com/DeviaVir/terraform-provider-gsuite"
+  packages = ["gsuite"]
+  revision = "1ece8af5a8acc4aac3639652bd602eddb63ad7f4"
+  version = "v0.1.7"
+
+[[projects]]
   name = "github.com/agext/levenshtein"
   packages = ["."]
   revision = "5f10fee965225ac1eecdc234c09daf5cd9e7f7b6"
@@ -491,6 +497,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "f6a5feaa6d211abd264425e7d6aca1a33003494a53775359535180ebbce351f1"
+  inputs-digest = "b75e11796fd3de6b282fcfffe517479ad529184fb4d4c0ae284af126df4091d8"
   solver-name = "gps-cdcl"
   solver-version = 1
