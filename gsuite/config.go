@@ -34,6 +34,10 @@ type Config struct {
 	OauthScopes []string
 
 	directory *directory.Service
+
+	// basePath is used during testing to redirect api calls to our own
+	// http server.
+	basePath string
 }
 
 // loadAndValidate loads the application default credentials from the
@@ -100,6 +104,10 @@ func (c *Config) loadAndValidate() error {
 	}
 	directorySvc.UserAgent = userAgent
 	c.directory = directorySvc
+
+	if c.basePath != "" {
+		c.directory.BasePath = c.basePath
+	}
 
 	return nil
 }
